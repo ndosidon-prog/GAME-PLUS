@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC26 Championnat PRO - GameFlash</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #0f0f1a;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff004c, #7a00ff);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: #1c1c2e;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 12px;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            background: #ff004c;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #cc003d;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #333;
+            text-align: left;
+        }
+
+        .groupBox {
+            margin-top: 10px;
+            padding: 10px;
+            background: #111122;
+            border-radius: 10px;
+        }
+    </style>
+    <!-- icone de l'ongle -->
+    <link rel="shortcut icon" href="./logo-head.png">
+</head>
+
+<body>
+
+    <header>
+        <h1>🔥 FC26 CHAMPIONNAT PRO (MODE MIX)</h1>
+        <p>32 joueurs → Groupes → Phase finale</p>
+    </header>
+
+    <div class="container">
+
+        <!-- INSCRIPTION -->
+        <div class="card">
+            <h2>📝 Inscription (32 joueurs max)</h2>
+
+            <form id="formInscription" action="TON_URL_APPS_SCRIPT" method="POST">
+
+                <input type="text" name="Nom" placeholder="Nom" required>
+                <input type="text" name="Pseudo" placeholder="Pseudo" required>
+                <input type="text" name="WhatsApp" placeholder="WhatsApp" required>
+                <input type="email" name="Email" placeholder="Email" required>
+
+
+                <select name="Equipe" required>
+                    <option value="">⚽ Sélectionnez votre équipe FC 26</option>
+
+                    <!-- ESPAGNE -->
+                    <optgroup label="🇪🇸 LALIGA EA SPORTS">
+
+                        <option>Real Madrid</option>
+                        <option>FC Barcelona</option>
+                        <option>Atlético de Madrid</option>
+                        <option>Athletic Club</option>
+                        <option>Real Sociedad</option>
+                        <option>Sevilla FC</option>
+                        <option>Valencia CF</option>
+                        <option>Villarreal CF</option>
+                        <option>Real Betis</option>
+                        <option>Girona FC</option>
+                        <option>Getafe CF</option>
+                        <option>Osasuna</option>
+                        <option>Celta Vigo</option>
+                        <option>Rayo Vallecano</option>
+                        <option>Mallorca</option>
+                        <option>Las Palmas</option>
+                        <option>Deportivo Alavés</option>
+
+                    </optgroup>
+
+                    <!-- ANGLETERRE -->
+                    <optgroup label="🏴 PREMIER LEAGUE">
+
+                        <option>Manchester City</option>
+                        <option>Manchester United</option>
+                        <option>Liverpool</option>
+                        <option>Arsenal</option>
+                        <option>Chelsea</option>
+                        <option>Tottenham Hotspur</option>
+                        <option>Newcastle United</option>
+                        <option>Aston Villa</option>
+                        <option>West Ham United</option>
+                        <option>Brighton</option>
+                        <option>Wolverhampton</option>
+                        <option>Everton</option>
+                        <option>Crystal Palace</option>
+                        <option>Brentford</option>
+                        <option>Fulham</option>
+                        <option>Leicester City</option>
+                        <option>Nottingham Forest</option>
+
+                    </optgroup>
+
+                    <!-- FRANCE -->
+                    <optgroup label="🇫🇷 LIGUE 1">
+
+                        <option>Paris Saint-Germain (PSG)</option>
+                        <option>Olympique de Marseille</option>
+                        <option>AS Monaco</option>
+                        <option>Olympique Lyonnais</option>
+                        <option>LOSC Lille</option>
+                        <option>RC Lens</option>
+                        <option>OGC Nice</option>
+                        <option>Stade Rennais</option>
+                        <option>Montpellier</option>
+                        <option>FC Nantes</option>
+
+                    </optgroup>
+
+                    <!-- ITALIE -->
+                    <optgroup label="🇮🇹 SERIE A">
+
+                        <option>Juventus</option>
+                        <option>Inter Milan</option>
+                        <option>AC Milan</option>
+                        <option>Napoli</option>
+                        <option>AS Roma</option>
+                        <option>Lazio</option>
+                        <option>Atalanta</option>
+                        <option>Fiorentina</option>
+                        <option>Torino</option>
+                        <option>Bologna</option>
+
+                    </optgroup>
+
+                    <!-- ALLEMAGNE -->
+                    <optgroup label="🇩🇪 BUNDESLIGA">
+
+                        <option>Bayern Munich</option>
+                        <option>Borussia Dortmund</option>
+                        <option>RB Leipzig</option>
+                        <option>Bayer Leverkusen</option>
+                        <option>Eintracht Frankfurt</option>
+                        <option>Wolfsburg</option>
+                        <option>Stuttgart</option>
+                        <option>Gladbach</option>
+
+                    </optgroup>
+
+                    <!-- PORTUGAL -->
+                    <optgroup label="🇵🇹 LIGA PORTUGAL">
+
+                        <option>Benfica</option>
+                        <option>FC Porto</option>
+                        <option>Sporting CP</option>
+                        <option>Braga</option>
+
+                    </optgroup>
+
+                    <!-- PAYS-BAS -->
+                    <optgroup label="🇳🇱 EREDIVISIE">
+
+                        <option>Ajax</option>
+                        <option>PSV Eindhoven</option>
+                        <option>Feyenoord</option>
+                        <option>AZ Alkmaar</option>
+
+                    </optgroup>
+
+                    <!-- BELGIQUE -->
+                    <optgroup label="🇧🇪 BELGIQUE">
+
+                        <option>Club Brugge</option>
+                        <option>Anderlecht</option>
+                        <option>Genk</option>
+
+                    </optgroup>
+
+                    <!-- TURQUIE -->
+                    <optgroup label="🇹🇷 SUPER LIG">
+
+                        <option>Galatasaray</option>
+                        <option>Fenerbahçe</option>
+                        <option>Besiktas</option>
+
+                    </optgroup>
+
+                    <!-- ARABIE SAOUDITE -->
+                    <optgroup label="🇸🇦 SAUDI PRO LEAGUE">
+
+                        <option>Al Nassr</option>
+                        <option>Al Hilal</option>
+                        <option>Al Ittihad</option>
+                        <option>Al Ahli</option>
+
+                    </optgroup>
+
+                    <!-- MLS -->
+                    <optgroup label="🇺🇸 MAJOR LEAGUE SOCCER">
+
+                        <option>Inter Miami</option>
+                        <option>LA Galaxy</option>
+                        <option>Atlanta United</option>
+                        <option>New York City FC</option>
+
+                    </optgroup>
+
+                    <!-- ARGENTINE -->
+                    <optgroup label="🇦🇷 ARGENTINE">
+
+                        <option>River Plate</option>
+                        <option>Boca Juniors</option>
+                        <option>Racing Club</option>
+
+                    </optgroup>
+
+                    <!-- BRÉSIL -->
+                    <optgroup label="🇧🇷 BRÉSIL">
+
+                        <option>Flamengo</option>
+                        <option>Palmeiras</option>
+                        <option>Santos</option>
+                        <option>Corinthians</option>
+                        <option>São Paulo FC</option>
+
+                    </optgroup>
+
+                    <!-- AFRIQUE -->
+                    <optgroup label="🌍 AFRIQUE">
+
+                        <option>TP Mazembe</option>
+                        <option>AS Vita Club</option>
+                        <option>Al Ahly</option>
+                        <option>Wydad Casablanca</option>
+                        <option>Espérance Tunis</option>
+
+                    </optgroup>
+
+                    <!-- ÉQUIPES NATIONALES -->
+                    <optgroup label="🌎 ÉQUIPES NATIONALES">
+
+                        <option>France</option>
+                        <option>Argentine</option>
+                        <option>Brésil</option>
+                        <option>Portugal</option>
+                        <option>Angleterre</option>
+                        <option>Espagne</option>
+                        <option>Belgique</option>
+                        <option>Allemagne</option>
+                        <option>Italie</option>
+                        <option>Pays-Bas</option>
+                        <option>Maroc</option>
+                        <option>Sénégal</option>
+                        <option>Côte d’Ivoire</option>
+
+                    </optgroup>
+
+                </select>
+
+
+                <button type="submit">S’inscrire</button>
+            </form>
+        </div>
+
+        <!-- GROUPES -->
+        <div class="card">
+            <h2>🏆 Groupes (4 groupes de 8)</h2>
+            <button onclick="generateGroups()">Créer les groupes</button>
+            <div id="groups"></div>
+        </div>
+
+        <!-- MATCHS -->
+        <div class="card">
+            <h2>⚔️ Matchs du tournoi</h2>
+            <button onclick="generateMatches()">Générer matchs</button>
+            <div id="matches"></div>
+        </div>
+
+        <!-- CLASSEMENT -->
+        <div class="card">
+            <h2>📊 Classement par groupe</h2>
+            <button onclick="loadGroups()">Afficher classement</button>
+            <div id="ranking"></div>
+        </div>
+
+    </div>
+
+    <script>
+
+        async function doPost(e) {
+
+            let sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("players");
+
+            let data = sheet.getDataRange().getValues();
+
+            // limite 32 joueurs
+            if (data.length > 32) {
+                return ContentService.createTextOutput("FULL");
+            }
+
+            sheet.appendRow([
+                e.parameter.Nom,
+                e.parameter.Pseudo,
+                e.parameter.WhatsApp,
+                e.parameter.Email,
+                e.parameter.Equipe
+            ]);
+
+            return ContentService.createTextOutput("OK");
+        }
+
+
+        function doGet(e) {
+
+            let sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("players");
+            let data = sheet.getDataRange().getValues();
+
+            let action = e.parameter.action;
+
+            // 📋 LISTE JOUEURS
+            if (action == "players") {
+
+                let res = [];
+
+                for (let i = 1; i < data.length; i++) {
+                    res.push({
+                        nom: data[i][0],
+                        pseudo: data[i][1],
+                        equipe: data[i][4]
+                    });
+                }
+
+                return ContentService
+                    .createTextOutput(JSON.stringify(res))
+                    .setMimeType(ContentService.MimeType.JSON);
+            }
+
+            return ContentService.createTextOutput("OK");
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- /* ================= GOOGLE APPS SCRIPT =================
+
+function doPost(e){
+let sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("players");
+let data = sheet.getDataRange().getValues();
+
+if(data.length > 32) return ContentService.createTextOutput("FULL");
+
+sheet.appendRow([
+e.parameter.Nom,
+e.parameter.Pseudo,
+e.parameter.WhatsApp,
+e.parameter.Email,
+e.parameter.Equipe,
+"",
+0
+]);
+
+return ContentService.createTextOutput("OK");
+}
+
+function doGet(e){
+let sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("players");
+let data = sheet.getDataRange().getValues();
+let action = e.parameter.action;
+
+// GROUPS
+if(action == "groups"){
+
+let groups = {A:[],B:[],C:[],D:[]};
+
+let players = data.slice(1).map(p=>p[1]);
+players = players.sort(()=>Math.random()-0.5);
+
+let i = 0;
+players.forEach(p=>{
+if(i%4==0) groups.A.push(p);
+if(i%4==1) groups.B.push(p);
+if(i%4==2) groups.C.push(p);
+if(i%4==3) groups.D.push(p);
+i++;
+});
+
+return ContentService.createTextOutput(JSON.stringify(groups))
+<!-- .setMimeType(ContentService.MimeType.JSON); -->
+}
+
+<!-- // DRAW MATCHES -->
+<!-- if(action == "draw"){ -->
+<!-- let players = data.slice(1).map(p=>p[1]); -->
+<!-- players = players.sort(()=>Math.random()-0.5); -->
+
+let matches=[]; -->
+
+for(let i=0;i<players.length;i+=2){ if(players[i+1]) matches.push({a:players[i],b:players[i+1]}); } return
+    ContentService.createTextOutput(JSON.stringify(matches)) .setMimeType(ContentService.MimeType.JSON); } // RANKING
+    if(action=="ranking" ){ let res=[]; for(let i=1;i<data.length;i++){ res.push({pseudo:data[i][1], group:data[i][5],
+    points:data[i][6]}); } return ContentService.createTextOutput(JSON.stringify(res))
+    .setMimeType(ContentService.MimeType.JSON); } } */
