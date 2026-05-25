@@ -90,12 +90,31 @@
         <div class="card">
             <h2>📝 Inscription (32 joueurs max)</h2>
 
-            <form id="formInscription" action="https://script.google.com/macros/s/AKfycbzsXk2cKak_oAkzirC8axxlmnAikq4U1Cdlklf9EvJyB4zSCuwGPsi2ZFjJBjIQ7hyedw/exec" method="POST">
+           <form id="form">
+  <input name="nom" placeholder="Nom">
+  <input name="email" placeholder="Email">
+  <input name="telephone" placeholder="Téléphone">
 
-                <input type="text" name="Nom" placeholder="Nom" required>
-                <input type="text" name="Pseudo" placeholder="Pseudo" required>
-                <input type="text" name="WhatsApp" placeholder="WhatsApp" required>
-                <input type="email" name="Email" placeholder="Email" required>
+  <button type="submit">Envoyer</button>
+</form>
+
+<script>
+const url = "TON_URL_APPS_SCRIPT";
+
+document.getElementById("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let formData = new FormData(this);
+
+  fetch(url, {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.text())
+  .then(data => alert("Inscription envoyée"))
+  .catch(err => alert("Erreur"));
+});
+</script>
 
 
                 <select name="Equipe" required>
