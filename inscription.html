@@ -366,62 +366,6 @@
 
 </html>
 
-<!-- /* ================= GOOGLE APPS SCRIPT =================
 
-function doPost(e){
-let sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("players");
-let data = sheet.getDataRange().getValues();
 
-if(data.length > 32) return ContentService.createTextOutput("FULL");
 
-sheet.appendRow([
-e.parameter.Nom,
-e.parameter.Pseudo,
-e.parameter.WhatsApp,
-e.parameter.Email,
-e.parameter.Equipe,
-"",
-0
-]);
-
-return ContentService.createTextOutput("OK");
-}
-
-function doGet(e){
-let sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("players");
-let data = sheet.getDataRange().getValues();
-let action = e.parameter.action;
-
-// GROUPS
-if(action == "groups"){
-
-let groups = {A:[],B:[],C:[],D:[]};
-
-let players = data.slice(1).map(p=>p[1]);
-players = players.sort(()=>Math.random()-0.5);
-
-let i = 0;
-players.forEach(p=>{
-if(i%4==0) groups.A.push(p);
-if(i%4==1) groups.B.push(p);
-if(i%4==2) groups.C.push(p);
-if(i%4==3) groups.D.push(p);
-i++;
-});
-
-return ContentService.createTextOutput(JSON.stringify(groups))
-<!-- .setMimeType(ContentService.MimeType.JSON); -->
-}
-
-<!-- // DRAW MATCHES -->
-<!-- if(action == "draw"){ -->
-<!-- let players = data.slice(1).map(p=>p[1]); -->
-<!-- players = players.sort(()=>Math.random()-0.5); -->
-
-let matches=[]; -->
-
-for(let i=0;i<players.length;i+=2){ if(players[i+1]) matches.push({a:players[i],b:players[i+1]}); } return
-    ContentService.createTextOutput(JSON.stringify(matches)) .setMimeType(ContentService.MimeType.JSON); } // RANKING
-    if(action=="ranking" ){ let res=[]; for(let i=1;i<data.length;i++){ res.push({pseudo:data[i][1], group:data[i][5],
-    points:data[i][6]}); } return ContentService.createTextOutput(JSON.stringify(res))
-    .setMimeType(ContentService.MimeType.JSON); } } */
